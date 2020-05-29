@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 28, 2020 at 06:46 PM
+-- Generation Time: May 29, 2020 at 01:15 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -17,32 +17,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admins`
+-- Table structure for table `products`
 --
 
-CREATE TABLE `admins` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `username` varchar(200) NOT NULL,
-  `password` varchar(1000) NOT NULL,
-  `email` varchar(300) NOT NULL,
-  `full_name` varchar(100) NOT NULL
+CREATE TABLE `products` (
+  `id` int(10) NOT NULL,
+  `name` varchar(300) NOT NULL,
+  `categories` text NOT NULL,
+  `thumbnail` varchar(1000) NOT NULL,
+  `price` float NOT NULL,
+  `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `admins`
---
-
-INSERT INTO `admins` (`id`, `username`, `password`, `email`, `full_name`) VALUES
-(1, 'admin', '202cb962ac59075b964b07152d234b70', 'admin@domain.com', 'Mouad');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admins`
+-- Indexes for table `products`
 --
-ALTER TABLE `admins`
+ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -50,7 +44,7 @@ ALTER TABLE `admins`
 --
 
 --
--- AUTO_INCREMENT for table `admins`
+-- AUTO_INCREMENT for table `products`
 --
-ALTER TABLE `admins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `products`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
