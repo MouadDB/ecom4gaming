@@ -9,16 +9,16 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="./index.php">Accueil</a>
+                    <a class="nav-link font-weight-bold" href="./index.php">Accueil</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="./products.php">Produits</a>
+                    <a class="nav-link font-weight-bold" href="./products.php">Produits</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="./categories.php">Categories</a>
+                    <a class="nav-link font-weight-bold" href="./categories.php">Categories</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="./orders.php">Commandes</a>
+                    <a class="nav-link font-weight-bold" href="./orders.php">Commandes</a>
                 </li>
             </ul>
         </div>
