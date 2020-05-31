@@ -58,4 +58,26 @@ $(function () {
 
         );
     });
+
+    $("#add_product_button").click(function (e) {
+        e.preventDefault();
+
+        $.post("ajax.php", {
+            action: 'add_product',
+            data: $("#add_product_form").serialize()
+        },
+        function (result) {
+            if (result.status == 'success') {
+                $(".modal-message").html('<div class="alert alert-success">'+ result.msg +' <i class="fas fa-sync fa-spin"></i></div>');
+
+                setTimeout(() => {
+                    location.reload();
+                }, 1300);
+            } else {
+                $(".modal-message").html('<div class="alert alert-danger">'+ result.msg +'</div>');
+            }
+        }
+
+        );
+    });
 });

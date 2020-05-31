@@ -10,6 +10,9 @@ switch ($_POST['action']) {
     case 'update_category':
         update_category($_POST['data']);
         break;
+    case 'add_product':
+        add_product($_POST['data']);
+        break;
 }
 
 
@@ -30,4 +33,13 @@ function update_category($data) {
     parse_str(urldecode($data), $result);
     $categories = new Categories();
     echo json_encode($categories->update_category($result['category_id'], $result['category_name']));
+}
+
+function add_product($data) {
+    if (!$data) return ;
+    header('Content-Type: application/json');
+
+    parse_str(urldecode($data), $result);
+    $products = new Products();
+    echo json_encode($products->add_product($result));
 }

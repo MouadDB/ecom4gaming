@@ -25,11 +25,10 @@ $all_cats = $categories->get_all_cats();
       <div class="page-header">
         <?= isset($msg) ? $msg : ''; ?>
         <h1 id="tables" class="float-left">Categories</h1>
-        <button class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#add_db"><i
+        <button class="btn btn-outline-secondary float-right" data-toggle="modal" data-target="#add_category"><i
             class="fa fa-plus"></i> Ajouter une Catégorie</button>
 
-
-        <div class="modal fade" id="add_db" tabindex="-1" role="dialog" aria-labelledby="add_db" aria-hidden="true">
+        <div class="modal fade" id="add_category" tabindex="-1" role="dialog" aria-labelledby="add_category" aria-hidden="true">
           <div class="modal-dialog modal-lg" style="max-width:36%" role="document">
             <div class="modal-content">
               <div class="modal-header">
